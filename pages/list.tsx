@@ -84,7 +84,7 @@ const HomeRoutes: React.FC<HomeRouteProps> = ({ routes }) => {
 export default HomeRoutes
 
 export const getStaticProps = async () => {
-	const response = await fetch(process.env.apiURL).then((x) => x.json())
+	const response = await fetch("https://raw.githubusercontent.com/pranavnt/ll-routes/main/routes.json").then((x) => x.json())
 
 	return {
 		props: {
